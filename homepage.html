@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mya Thiel">
+    <title> Wildlife Adventures </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="png" href="images/favicon-32x32.png">
+</head>
+<body>
+<!---navbar-->
+<header>
+<nav class="navbar">
+    <ul class="nav-list">
+        <li><a href="homepage.html">Home</a></li>
+
+        <li class="dropdown">
+            <a href="#" id="dropDown" class="nav-link">Explore ▼</a>
+
+            <ul class="dropdown-content" id="dropdownMenu">
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog / Adventures</a></li>
+                <li><a href="photos.html">Wildlife Photos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+</header>
+<!--welcome section-->
+<main>
+        <header class="hero">
+        <div class="hero-text">
+        <div class="welcome-section">
+            <h1>Welcome to My Wildlife Adventures</h1>
+            <p>Join me as I explore the outdoors, share hunting experiences, and capture stunning wildlife photography. This site is a place for nature enthusiasts and hunters to connect and learn.</p>
+        </div>
+    </div>
+    </header>
+
+    <h2 class="featured-title">Featured Stories</h2>
+
+    <section class="story-row">
+
+        <!-- Story Card 1 -->
+    <article class="story-card">
+        <h3>Adventure Awaits!</h3>
+        <a href="blog.html#buck-story">
+        <img src="images/river photo.jpg" alt="Hunting Trip Photo">
+        </a>
+        <p>Check out my successful hunting expeditions!</p>
+        <a href="blog.html#buck-story" class="story-btn"> Read More → </a>
+    </article>
+       
+      <!-- Story Card 2 -->
+    <article class="story-card">
+        <h3>Where Bucks Leave Their Mark</h3>
+        <a href="blog.html#rub-story">
+        <img src="images/deer rub w_ bow.jpg" alt="Deer Rub Photo">
+        </a>
+        <p>A successful scouting expedition!</p>
+        <a href="blog.html#rub-story" class="story-btn"> Read More → </a>
+    </article>
+
+        <!-- Story Card 3 -->
+        <article class="story-card">
+            <h3>Check The Cams!</h3>
+           <a href="blog.html#trail-cam">
+            <img src="images/Tbuck.jpg" alt="Target buck">
+           </a>
+            <p>A sneak peak on the trail cams.</p>
+            <a href="blog.html#trail-cam" class="story-btn">Read More →</a>
+    </article>
+
+        <!-- Story Card 4 -->
+        <article class="story-card">
+            <h3>Cat Tales</h3>
+            <a href="blog.html#cat">
+            <img src="images/cathike.jpg" alt="Cat">
+            </a>
+            <p>Taking my cat on outdoor adventures!</p>
+            <a href="blog.html#cat" class="story-btn">Read More →</a>
+    </article>
+
+    </section>
+
+</div>
+<!--footer-->
+<footer>
+    <p>© 2025 My Wildlife Adventures</p>
+</footer>
+
+<script>
+const btn = document.getElementById('dropDown');
+const menu = document.getElementById('dropdownMenu');
+
+btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    menu.classList.toggle('show');
+});
+
+document.addEventListener('click', function(e) {
+    if (!menu.contains(e.target) && !btn.contains(e.target)) {
+        menu.classList.remove('show');
+    }
+});
+</script>
+
+</body>
+</html>

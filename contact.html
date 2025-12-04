@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mya Thiel">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="png" href="images/favicon-32x32.png">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <ul class="nav-list">
+        <li><a href="homepage.html">Home</a></li>
+
+        <li class="dropdown">
+            <a href="#" id="dropDown">Explore ▼</a>
+            <ul class="dropdown-content" id="dropdownMenu">
+                <li><a href="about.html" >About</a></li>
+                <li><a href="blog.html">Blog / Adventures</a></li>
+                <li><a href="photos.html" >Wildlife Photos</a></li>
+                <li><a href="contact.html" >Contact</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<main>
+
+    <h1>Get In Touch</h1>
+    <p style="text-align:center; max-width:700px; margin: 0 auto 30px;">
+        Use the form below to ask questions or share your own wildlife experiences.
+    </p>
+
+    <!-- FORM -->
+    <form id="simpleForm">
+
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" rows="5" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Success message -->
+    <p id="formResponse" style="text-align:center; font-weight:bold; margin-top:20px;"></p>
+
+    <!-- Contact Box -->
+    <div class="content-box" style="text-align:center; margin-top:40px;">
+        <h2>Other Ways to Connect</h2>
+
+        <p>Email me directly:</p>
+        <p><strong>mya.thiel07@gmail.com</strong></p>
+
+        <p>Find me on social media:</p>
+        <ul style="list-style:none; padding:0;">
+            <li><strong>Instagram:</strong> the_mya_bird</li>
+            <li><strong>Snapchat:</strong> mthiel60</li>
+        </ul>
+    </div>
+
+</main>
+
+<footer>
+    <p>© 2025 My Wildlife Adventures</p>
+</footer>
+
+<!-- Dropdown Script -->
+<script>
+const dropDown = document.getElementById("dropDown");
+const dropdownMenu = document.getElementById("dropdownMenu");
+
+dropDown.addEventListener("click", (e) => {
+    e.preventDefault();
+    dropdownMenu.classList.toggle("show");
+});
+
+document.addEventListener("click", (e) => {
+    if (!dropDown.contains(e.target) && !dropdownMenu.contains(e.target)) {
+        dropdownMenu.classList.remove("show");
+    }
+});
+</script>
+
+<!-- FORM LOGIC -->
+<script>
+document.getElementById("simpleForm").addEventListener("submit", function(e) {
+    e.preventDefault(); 
+    document.getElementById("formResponse").textContent =
+        "Thank you! Your message has been received.";
+    this.reset(); 
+});
+</script>
+
+</body>
+</html>

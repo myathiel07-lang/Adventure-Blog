@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mya Thiel">
+    <title>Wildlife Photos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="png" href="images/favicon-32x32.png">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <ul class="nav-list">
+        <li><a href="homepage.html">Home</a></li>
+
+        <li class="dropdown">
+            <a href="#" id="dropDown" aria-haspopup="true" aria-expanded="false">
+                Explore ▼
+            </a>
+
+            <ul class="dropdown-content" id="dropdownMenu">
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html" >Blog / Adventures</a></li>
+                <li><a href="photos.html" >Wildlife Photos</a></li>
+                <li><a href="contact.html" >Contact</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<main>
+    <h1>Wildlife & Outdoor Photos</h1>
+    <p style="text-align:center; max-width:700px; margin:0 auto;">
+        A collection of my favorite wildlife and nature moments.
+        <br>
+        Click any image to view it larger!
+    </p>
+
+    <!-- GALLERY WRAPPER -->
+<section class="gallery">
+    <div class="photo-gallery">
+
+        <!-- PHOTO 1 -->
+        <figure>
+            <a href="images/waterfall.jpg" class="lightbox">
+                <img src="images/waterfall.jpg" alt="waterfall">
+            </a>
+            <figcaption>
+                “One of the many beautiful waterfalls along the trail at Carp Falls.”
+            </figcaption>
+        </figure>
+
+        <!-- PHOTO 2 -->
+        <figure>
+            <a href="images/bog.jpg" class="lightbox">
+                <img src="images/bog.jpg" alt="bog">
+            </a>
+            <figcaption>
+                "A quiet bog view.<br>
+                untouched, calm, and full of hidden wildlife."
+            </figcaption>
+        </figure>
+
+        <!-- PHOTO 3 -->
+        <figure>
+            <a href="images/boulder.jpg" class="lightbox">
+                <img src="images/boulder.jpg" alt="rock">
+            </a>
+            <figcaption>
+                “Climbed up on this boulder at Carp Falls.<br>
+                The perfect place to stop and enjoy the scenery.”
+            </figcaption>
+        </figure>
+
+        <!-- PHOTO 4 -->
+         <figure>
+            <a href="images/falls.jpg" class="lightbox">
+                <img src="images/falls.jpg" alt="falls">
+            </a>
+            <figcaption>
+                “A favorite shot of the iconic waterfall at Wright Street Falls!”
+            </figcaption>
+        </figure>
+
+        <!-- PHOTO 5 -->
+        <figure>
+            <a href="images/snorkle.jpg" class="lightbox">
+                <img src="images/snorkle.jpg" alt="snorkle">
+            </a>
+            <figcaption>
+                “Snorkeling in Hawaii!<br>
+                crystal clear water, bright fish, and one of my all-time favorite ocean adventures.”
+            </figcaption>
+        </figure>
+
+        <!-- PHOTO 6 -->
+        <figure>
+            <a href="images/dolphin.jpg" class="lightbox">
+                <img src="images/dolphin.jpg" alt="dolphin">
+            </a>
+            <figcaption>
+                “Met some dolphin friends during a sailing trip in Hawaii!”
+            </figcaption>
+        </figure>
+
+        <!-- PHOTO 7 -->
+        <figure>
+            <a href="images/whale.jpg" class="lightbox">
+                <img src="images/whale.jpg" alt="whale">
+            </a>
+            <figcaption>
+                “This whale popped up to say ‘Aloha’ with a tail wave 🤙”
+            </figcaption>
+        </figure>
+
+         <!-- PHOTO 8 -->
+        <figure>
+            <a href="images/turtle.jpg" class="lightbox">
+                <img src="images/turtle.jpg" alt="turtle">
+            </a>
+            <figcaption>
+            “Sunset on the beach with a little turtle friend, the perfect end to the day.”
+            </figcaption>
+        </figure>
+
+    </div>
+</section>
+<!-- LIGHTBOX SCRIPT -->
+<script>
+document.querySelectorAll('.lightbox').forEach(imgLink => {
+    imgLink.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const overlay = document.createElement('div');
+        overlay.style.position = 'fixed';
+        overlay.style.top = 0;
+        overlay.style.left = 0;
+        overlay.style.width = '100%';
+        overlay.style.height = '100%';
+        overlay.style.background = 'rgba(0,0,0,0.8)';
+        overlay.style.display = 'flex';
+        overlay.style.alignItems = 'center';
+        overlay.style.justifyContent = 'center';
+        overlay.style.zIndex = 10000;
+        overlay.style.cursor = 'zoom-out';
+
+        const img = document.createElement('img');
+        img.src = this.href;
+        img.style.maxWidth = '90%';
+        img.style.maxHeight = '90%';
+        img.style.borderRadius = '10px';
+
+        overlay.appendChild(img);
+        document.body.appendChild(overlay);
+
+        overlay.addEventListener('click', () => overlay.remove());
+    });
+});
+
+const dropDown = document.getElementById("dropDown");
+const dropdownMenu = document.getElementById("dropdownMenu");
+
+dropDown.addEventListener("click", function(event) {
+    event.preventDefault();
+    dropdownMenu.classList.toggle("show");
+    dropDown.setAttribute("aria-expanded", dropdownMenu.classList.contains("show"));
+});
+
+document.addEventListener("click", function(event) {
+    if (!dropDown.contains(event.target) && !dropdownMenu.contains(event.target)) {
+        dropdownMenu.classList.remove("show");
+        dropDown.setAttribute("aria-expanded", "false");
+    }
+});
+
+</script>
+
+</body>
+</html>

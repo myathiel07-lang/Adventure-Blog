@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mya Thiel">
+    <title>My Adventures Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <ul class="nav-list">
+        <li><a href="homepage.html">Home</a></li>
+
+        <li class="dropdown">
+            <a href="#" id="dropDown">Explore ▼</a>
+            <ul class="dropdown-content" id="dropdownMenu">
+                <li><a href="about.html" >About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="photos.html" >Wildlife Photos</a></li>
+                <li><a href="contact.html" >Contact</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<header class="about-hero">
+    <h1>My Adventures</h1>
+    <p>Stories from the woods, the trails, and everywhere nature takes me.</p>
+</header>
+
+<main>
+
+    <!-- BLOG POST 1 -->
+    <article class="blog-post" id="chuck">
+        <img src="images/chuck.jpeg" alt="chuck">
+        <div class="blog-text">
+            <h2>Adventure Awaits!</h2>
+            <span class="date">November 28 2023 • by Mya</span>
+            <p>
+    This hunt quickly became one of my favorite memories. On a cold, quiet morning in my tree stand, 
+    I spotted the biggest-bodied 8 point buck I had ever seen. I steadied myself, took the shot, and 
+    watched him disappear into the brush.
+    <br><br>
+    Tracking him was a mix of adrenaline and nerves, but when I finally walked up on him, I couldn’t 
+    believe it—my second big 8 point ever, and the largest deer I’ve harvested on my own. Dragging him 
+    out and processing the meat felt incredibly rewarding, and bringing home those antlers was the 
+    perfect ending to the experience.
+    <br><br>
+    I named him Chuck, and he’ll always be a hunt I’ll never forget.
+            </p>
+             <button class="like-btn" onclick="likePost(this)">❤️ Like <span>0</span></button>
+        </div>
+    </article>
+
+    <!-- BLOG POST 2 -->
+    <article class="blog-post" id="rub-story">
+        <img src="images/bigrub.jpg" alt="Deer rub">
+        <div class="blog-text">
+            <h2>Where Bucks Leave Their Mark</h2>
+            <span class="date">October 2024 • by Mya</span>
+            <p>
+    This was one of the biggest buck rubs I’ve ever found, and I couldn’t believe it when I walked up 
+    on it. The size of that tree and how shredded it was had me fired up, I knew a giant was running around
+    that ridge. It’s the kind of sign that instantly makes your heart pick up a little.
+    <br><br>
+    Fresh rubs like that are the best. They tell you you’re in the right spot, and they make the whole 
+    scouting trip feel worth it. Seeing this indicated the rut was on! 
+    And it definitely gave me a confidence boost going into the season.
+            </p>
+            <button class="like-btn" onclick="likePost(this)">❤️ Like <span>0</span></button>
+        </div>
+    </article>
+
+    <!-- BLOG POST 3 -->
+<article class="blog-post" id="trail-cam">
+    <img src="images/Tbuck.jpg" alt="Trail cam buck">
+
+    <div class="blog-text">
+        <h2>Check the Cams!</h2>
+        <span class="date">November 2025 • by Mya</span>
+        <p>
+            Trail cams are one of my favorite tools for learning how deer move through an area. 
+            They show you what’s around, when the deer are coming through, and the patterns they follow. 
+            This buck meant a lot to me because he was my first real target buck in the U.P.
+            <br><br>
+            Even though I didn’t end up harvesting him, he’ll always be a memorable part of my 
+            hunting story. It was my first hunt in the U.P., and seeing him pop up on camera made 
+            the whole experience exciting and special.
+        </p>
+        <button class="like-btn" onclick="likePost(this)">❤️ Like <span>0</span></button>
+    </div>
+</article>
+   
+<!-- BLOG POST 4 -->
+<article class="blog-post" id="cat">
+    <img src="images/snowcat.jpg" alt="snowcat">
+
+    <div class="blog-text">
+        <h2>Cat Tales</h2>
+        <span class="date">December 2023 • by Mya</span>
+        <p>
+        This tale starts with taking my cat, Gin, out scouting with us! 
+        She absolutely loves being outside and always wants to tag along.
+        This spot was extra special because it was my very first time scouting and hunting St. John’s Marsh, a place filled with memories for my dad since it’s a popular local hunting area.
+        I’m really glad Gin and I got to explore the marsh together and make our own memories there!
+        </p>
+        <button class="like-btn" onclick="likePost(this)">❤️ Like <span>0</span></button>
+    </div>
+</article>
+
+<!--BLOG POST 5-->
+<article class="blog-post" id="Bbass">
+<img src="images/Bass.jpg" alt="fishy">
+
+<div class="blog-text">
+<h2> Fishin Shenanigans</h2>
+<span class="date"> August 2024 • by Mya</span>
+<p>
+ We were fishing in a quiet marina when I spotted this bass hanging around the docks. 
+    I started messing with him by dragging my lure past his face a few times, just to see if he'd chase it. 
+    After teasing him long enough, he finally snapped at it and I snagged him!  
+    <br><br>
+    Even though it wasn’t a giant, moments like these are what make fishing so fun, just being out on the water, 
+    messing around, and never knowing what’s going to bite next.
+</p>
+ <button class="like-btn" onclick="likePost(this)">❤️ Like <span>0</span></button>
+    </div>
+</article>
+
+<!---BLOG POST 6-->
+<article class="blog-post" id="doe">
+<img src="images/doe 24.jpg"  alt="Doe">
+
+<div class="blog-text">
+<h2> Another Successful Hunt!</h2>
+<span class="date"> November 2024 • by Mya</span>
+<p>
+ This hunt was one of those quiet mornings where everything felt peaceful. I watched a small group 
+    of does wander in, taking their time, and I just sat there soaking it all in. At first I wasn't thinking about harvesting a doe.
+    But the thought of bringing home venison overtook me. Eventually one gave me 
+    a perfect, ethical shot, and I was able to make a clean harvest. It was simple, exciting, and honestly one 
+    of those hunts that just feels good from start to finish.
+    <br><br>
+    Every hunt teaches me something new, and this one was no different, another memory I’m grateful for 
+    and a reminder of why I love being out in the woods.
+</p>
+ <button class="like-btn" onclick="likePost(this)">❤️ Like <span>0</span></button>
+    </div>
+</article>
+
+</main>
+
+<footer>
+    <p>© 2025 My Wildlife Adventures</p>
+</footer>
+
+<!-- JS for like button -->
+<script>
+function likePost(button) {
+    let countSpan = button.querySelector("span");
+    let currentCount = parseInt(countSpan.textContent);
+    countSpan.textContent = currentCount + 1;
+}
+
+// dropdown
+const dropDown = document.getElementById("dropDown");
+const dropdownMenu = document.getElementById("dropdownMenu");
+
+dropDown.addEventListener("click", (e) => {
+    e.preventDefault();
+    dropdownMenu.classList.toggle("show");
+});
+
+document.addEventListener("click", (e) => {
+    if (!dropDown.contains(e.target) && !dropdownMenu.contains(e.target)) {
+        dropdownMenu.classList.remove("show");
+    }
+});
+</script>
+
+</body>
+</html>

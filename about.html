@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mya Thiel">
+    <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <ul class="nav-list">
+        <li><a href="homepage.html">Home</a></li>
+
+        <li class="dropdown">
+            <a href="#" id="dropDown" aria-haspopup="true" aria-expanded="false">
+                Explore ▼
+            </a>
+
+            <ul class="dropdown-content" id="dropdownMenu">
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html" >Blog / Adventures</a></li>
+                <li><a href="photos.html" >Wildlife Photos</a></li>
+                <li><a href="contact.html" >Contact</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<main>
+
+<!-- HERO HEADER -->
+<header class="about-hero">
+    <h1>About Me</h1>
+    <p>Sharing my love for the outdoors, wildlife, and the stories nature tells.</p>
+</header>
+
+<!-- INSPIRATIONAL QUOTE -->
+<blockquote class="nature-quote">
+    “The best adventures are the ones that bring you closer to the wild.”
+</blockquote>
+
+<!-- ABOUT CONTENT -->
+<section class="about-box">
+    <img src="images/saddle hunting.jpg" alt="Photo of Mya enjoying the outdoors" class="about-img">
+
+    <div class="about-text">
+        <h2>Hi, I'm Mya.</h2>
+
+        <p>
+            I’ve always felt at home in the woods. Whether it’s tracking deer signs,
+            photographing wildlife, or discovering hidden places,
+            nature has always been a huge part of my life.
+        </p>
+
+        <p>
+            This website is my way of sharing those experiences!
+            The excitement of scouting, the thrill of the hunt,
+            and the beauty of the animals and landscapes around us.
+        </p>
+
+        <p>
+            I hope my stories and photos inspire others to explore the outdoors,
+            appreciate wildlife, and find the same peace and adventure I do.
+        </p>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <p>© 2025 My Wildlife Adventures</p>
+</footer>
+
+<!-- Dropdown Script -->
+<script>
+const dropDown = document.getElementById("dropDown");
+const dropdownMenu = document.getElementById("dropdownMenu");
+
+dropDown.addEventListener("click", (e) => {
+    e.preventDefault();
+    dropdownMenu.classList.toggle("show");
+
+    // accessibility update
+    dropDown.setAttribute(
+        "aria-expanded",
+        dropdownMenu.classList.contains("show")
+    );
+});
+
+document.addEventListener("click", (e) => {
+    if (!dropDown.contains(e.target) && !dropdownMenu.contains(e.target)) {
+        dropdownMenu.classList.remove("show");
+        dropDown.setAttribute("aria-expanded", "false");
+    }
+});
+</script>
+
+</body>
+</html>

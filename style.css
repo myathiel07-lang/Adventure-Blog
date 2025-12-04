@@ -1,0 +1,463 @@
+/* --------------------------------------------------
+   COLOR PALETTE
+-------------------------------------------------- */
+:root {
+    --sage: #A7C4A0;        /* sage green */
+    --cream: #F7F5E8;       /* off-white */
+    --brown: #6B4F2A;       /*  brown */
+    --moss: #4F6F52;        /* forest green */
+    --tan: #D9C5A3;         /* light tan */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--cream);
+    font-family: "Georgia", serif;
+    color: var(--brown);
+}
+
+
+/* --------------------------------------------------
+   NAVBAR
+-------------------------------------------------- */
+.navbar {
+    background: var(--moss);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* NAV LINKS */
+.navbar a {
+    display: block;
+    padding: 16px 22px;
+    color: var(--cream);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+
+.navbar a:hover {
+    background: var(--sage);
+    color: var(--brown);
+    transform: translateY(-2px);
+}
+
+/* DROPDOWN */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--moss);
+    border-radius: 6px;
+    min-width: 180px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.dropdown-content.show {
+    display: flex;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+}
+
+.dropdown-content a:hover {
+    background: var(--sage);
+    color: var(--brown);
+}
+
+
+/* --------------------------------------------------
+   MAIN CONTENT
+-------------------------------------------------- */
+main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* STORY CARDS (HOMEPAGE) */
+.story-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 40px auto;
+}
+
+.story-card {
+    width: 24%;
+    background: var(--cream);
+    border: 2px solid var(--sage);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.story-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.story-card h3 {
+    color: var(--brown);
+    margin-bottom: 10px;
+}
+
+.story-card p {
+    color: var(--brown);
+    margin-bottom: 15px;
+}
+
+.story-btn {
+    display: inline-block;
+    background: var(--brown);
+    color: var(--cream);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s, color 0.2s;
+}
+
+.story-btn:hover {
+    background: var(--sage);
+    color: var(--brown);
+}
+
+
+/* --------------------------------------------------
+   HERO SECTION
+-------------------------------------------------- */
+.hero {
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+    background-image: url("images/heropicture.jpg");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 30px;
+    text-align: center;
+    color: white;
+    text-shadow: 0px 2px 5px rgba(0,0,0,0.5);
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+
+/* --------------------------------------------------
+   GLOBAL HEADERS
+-------------------------------------------------- */
+h1, h2 {
+    font-family: "Georgia", serif;
+    color: var(--moss);
+    text-align: center;
+}
+
+.about-hero h1 {
+    color: var(--cream);
+}
+/* --------------------------------------------------
+   GENERIC CONTENT BOX
+-------------------------------------------------- */
+.content-box {
+    max-width: 900px;
+    margin: 40px auto;
+    background: var(--tan);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+}
+
+
+/* --------------------------------------------------
+   GALLERY PAGE
+-------------------------------------------------- */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 260px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 3px solid var(--sage);
+    transition: transform 0.2s ease-in-out, border-color 0.2s;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+    border-color: var(--moss);
+}
+
+
+/* --------------------------------------------------
+   FORMS (CONTACT PAGE)
+-------------------------------------------------- */
+form {
+    max-width:600px;
+    margin: 40px auto;
+    background: var(--tan);
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+}
+
+label {
+    font-weight: bold;
+    color: var(--brown);
+}
+
+input[type="text"],
+input[type="email"],
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    border: 2px solid var(--sage);
+    border-radius: 6px;
+    background-color: var(--cream);
+    font-size: 16px;
+    resize: none;
+}
+button:hover,
+input[type="submit"]:hover {
+    background: var(--sage);
+    color: var(--brown);
+}
+
+/* --------------------------------------------------
+   FOOTER
+-------------------------------------------------- */
+footer {
+    background: var(--moss);
+    color: var(--cream);
+    text-align: center;
+    padding: 15px;
+    font-size: 15px;
+}
+
+/* --------------------------------------------------
+   ABOUT PAGE
+-------------------------------------------------- */
+.about-hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: var(--moss);
+    color: var(--cream);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.about-box {
+    display: flex;
+    gap: 30px;
+    max-width: 1100px;
+    background: var(--cream);
+    border: 2px solid var(--sage);
+    border-radius: 12px;
+    padding: 30px;
+    margin: 40px auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.about-img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid var(--sage);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+.about-text h2 {
+    color: var(--brown);
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    color: var(--brown);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* RESPONSIVE STACKING */
+@media (max-width: 900px) {
+    .about-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-img {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+.nature-quote {
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
+    margin: 30px auto;
+    padding: 10px 20px;
+    border-left: 4px solid var(--sage);
+    max-width: 700px;
+    color: var(--brown);
+}
+
+/* ---------------------------------------------
+   BLOG PAGE LAYOUT
+--------------------------------------------- */
+
+.blog-post {
+    max-width: 1100px;
+    margin: 40px auto;
+    background: var(--cream);
+    border: 3px solid var(--sage);
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    gap: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+     overflow: visible;
+    align-items: flex-start;
+}
+
+.blog-text {
+    width: 55%;
+}
+
+.blog-text h2 {
+    color: var(--brown);
+    margin-bottom: 8px;
+}
+
+.blog-text .date {
+    font-size: 14px;
+    color: var(--moss);
+    font-style: italic;
+}
+
+.like-btn {
+    margin-top: 15px;
+    background: var(--brown);
+    color: var(--cream);
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.like-btn:hover {
+    background: var(--sage);
+    color: var(--brown);
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+    .blog-post {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .blog-text {
+        width: 100%;
+    }
+}
+
+.blog-post img {
+    width: 250px;     
+    height: auto;     
+    object-fit: contain; 
+    border-radius: 10px;
+    border: 3px solid var(--sage);
+}
+
+/* --------------------------------------------------
+   WILDLIFE PHOTO GALLERY (GRID LAYOUT)
+-------------------------------------------------- */
+
+/* PHOTO GALLERY */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.photo-gallery figure {
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid var(--sage);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease-in-out, border-color 0.2s;
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.03);
+    border-color: var(--moss);
+}
+
+.photo-gallery figcaption {
+    margin-top: 10px;
+    font-size: 16px;
+    color: var(--brown);
+}
